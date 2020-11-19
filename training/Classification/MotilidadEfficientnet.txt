@@ -1,0 +1,26 @@
+█epoch     train_loss  valid_loss  accuracy  f1_score  precision_score  recall_score  time    
+█Downloading: "https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/efficientnet_b3_ra2-cf984f9c.pth" to /home/jonathan/.cache/torch/hub/checkpoints/efficientnet_b3_ra2-cf984f9c.pth
+█0         0.405199    0.300492    0.927434  0.937020  0.950156         0.924242      00:21     
+Better model found at epoch 0 with accuracy value: 0.9274336099624634.
+██1         0.312891    0.282516    0.936283  0.946903  0.922414         0.972727      00:19     
+Better model found at epoch 1 with accuracy value: 0.9362831711769104.
+█epoch     train_loss  valid_loss  accuracy  f1_score  precision_score  recall_score  time    
+██0         0.211579    0.150190    0.945133  0.953523  0.943620         0.963636      00:24     
+Better model found at epoch 0 with accuracy value: 0.9451327323913574.
+██1         0.174415    0.145276    0.945133  0.953938  0.935860         0.972727      00:24     
+██2         0.140571    0.156182    0.948673  0.956259  0.951952         0.960606      00:24     
+Better model found at epoch 2 with accuracy value: 0.9486725926399231.
+██3         0.137488    0.127035    0.962832  0.968037  0.972477         0.963636      00:23     
+Better model found at epoch 3 with accuracy value: 0.9628318548202515.
+██4         0.118886    0.126059    0.961062  0.966463  0.972393         0.960606      00:23     
+██5         0.115657    0.116766    0.955752  0.962631  0.949853         0.975758      00:24     
+██6         0.095593    0.107697    0.962832  0.968326  0.963964         0.972727      00:24     
+██7         0.097470    0.129771    0.959292  0.964670  0.978193         0.951515      00:24     
+██8         0.078526    0.110391    0.962832  0.968134  0.969605         0.966667      00:24     
+██9         0.069502    0.094240    0.962832  0.968326  0.963964         0.972727      00:23     
+██10        0.076236    0.090788    0.959292  0.965099  0.966565         0.963636      00:25     
+██11        0.064386    0.092838    0.969912  0.974046  0.981538         0.966667      00:24     
+Better model found at epoch 11 with accuracy value: 0.969911515712738.
+██12        0.061073    0.094097    0.966372  0.971256  0.969789         0.972727      00:24     
+██13        0.053318    0.090225    0.968142  0.972810  0.969880         0.975758      00:24     
+██14        0.056754    0.087231    0.969912  0.974046  0.981538         0.966667      00:24     

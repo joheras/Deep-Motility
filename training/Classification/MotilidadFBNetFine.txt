@@ -1,0 +1,24 @@
+Arguments ['width_divisor'] skipped for op Conv2d
+█epoch     train_loss  valid_loss  accuracy  f1_score  precision_score  recall_score  time    
+██0         0.264626    2.129426    0.923894  0.931419  0.983165         0.884848      00:53     
+Better model found at epoch 0 with accuracy value: 0.9238938093185425.
+██1         0.454008    116.612221  0.415929  0.000000  0.000000         0.000000      00:52     
+█epoch     train_loss  valid_loss  accuracy  f1_score  precision_score  recall_score  time    
+█/home/jonathan/.virtualenvs/segmentation/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+█0         0.141182    0.060942    0.982301  0.984894  0.981928         0.987879      00:53     
+Better model found at epoch 0 with accuracy value: 0.982300877571106.
+██1         0.144368    0.073001    0.968142  0.972561  0.978528         0.966667      00:53     
+██2         0.277172    4.509325    0.605310  0.740999  0.600753         0.966667      00:52     
+██3         0.232236    0.181871    0.930973  0.943560  0.903047         0.987879      00:52     
+██4         0.237776    0.089848    0.975221  0.979042  0.967456         0.990909      00:52     
+██5         0.192817    0.217034    0.938053  0.946401  0.956656         0.936364      00:52     
+██6         0.134307    0.169327    0.952212  0.960236  0.934097         0.987879      00:52     
+██7         0.106491    0.084181    0.971681  0.975831  0.972892         0.978788      00:52     
+██8         0.090872    0.112188    0.973451  0.977169  0.981651         0.972727      00:52     
+██9         0.077085    0.070824    0.978761  0.981873  0.978916         0.984848      00:52     
+██10        0.071088    0.063528    0.973451  0.977238  0.978723         0.975758      00:52     
+██11        0.043048    0.068912    0.971681  0.975610  0.981595         0.969697      00:52     
+██12        0.069753    0.063081    0.978761  0.981873  0.978916         0.984848      00:52     
+██13        0.049770    0.065341    0.980531  0.983409  0.978979         0.987879      00:52     
+██14        0.080610    0.065481    0.980531  0.983409  0.978979         0.987879      00:52     
