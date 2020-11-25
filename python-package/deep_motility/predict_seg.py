@@ -11,7 +11,6 @@ import io
 import numpy as np
 
 # Biomedical Images
-from nd2reader import ND2Reader
 from skimage import exposure, img_as_ubyte
 
 # List dir
@@ -94,33 +93,15 @@ def save_mask_prediction(image, mask, width, height, output_path,
 
 
 def get_prediction_several_models(input_path, output_path, model_names):
-    if input_path.endswith(".nd2"):
-        
-        with ND2Reader(input_path) as image_reader:
-            nd2Image = image_reader[0]
+    image = Image.open(input_path)
+    image_np = np.array(image)
 
-            # Image Conversion --------------------------------------
-
-            # Transforming image from 16bits into 8 bit
-            nd2Image = img_as_ubyte(nd2Image)
-
-            # Reescaling color intensity, if not image gets very dark
-            nd2Image = exposure.rescale_intensity(nd2Image)
-
-            # Converting 1 channel image to 3 channels
-            nd2Image = color.grey2rgb(nd2Image)
-            image = Image.fromarray(nd2Image)
-    else:
-        
-        image = Image.open(input_path)
-        image_np = np.array(image)
-
-        # Convert to 3 Channels if not
-        if image_np.shape[0] != 3:
-            if input_path.lower().endswith(".tiff") or input_path.lower().endswith(".tif"):
+    # Convert to 3 Channels if not
+    if image_np.shape[0] != 3:
+        if input_path.lower().endswith(".tiff") or input_path.lower().endswith(".tif"):
                 image_np = exposure.rescale_intensity(image_np)
-            image_np = color.grey2rgb(image_np)
-            image = Image.fromarray(image_np)
+        image_np = color.grey2rgb(image_np)
+        image = Image.fromarray(image_np)
 
     width, height = image.size
 
@@ -174,7 +155,7 @@ def predict_segmentation(input_folder, output_folder):
     os.makedirs(output_folder,exist_ok=True)
     images_path = []
     for image_path in os.listdir(input_folder):
-        if image_path.lower().split(".")[-1] in ["jpg", "png", "nd2", "tif", "tiff"]:
+        if image_path.lower().split(".")[-1] in ["jpg", "png", "tif", "tiff"]:
             images_path.append(input_folder+image_path)
     for image_path in images_path:    
         if "_pred." not in image_path.lower():
